@@ -11,15 +11,14 @@ class Solution {
         dfs.push_back(node);
         for(auto it: adj[node]){
             if(!vis[it]){
-                dfsfunc(it, adj, vis, dfs);
+                dfsfunc(it, adj ,vis , dfs);
             }
         }
     }
     vector<int> dfsOfGraph(int V, vector<int> adj[]) {
         // Code here
-        int vis[V]={0};
         vector<int> dfs;
-        
+        int vis[V]={0};
         dfsfunc(0, adj, vis, dfs);
         return dfs;
     }
